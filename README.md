@@ -7,7 +7,7 @@
 A simple type-safe wrapper around a `Promise` that provides an object-oriented interface
 for settling (resolving/rejecting) the promise.
 
-Written in TypeScript, and distriuted as both an ES module and CJS module with type
+Written in TypeScript, and distributed as both an ES module and CJS module with type
 definitions and source maps.
 
 # Contents
