@@ -1,6 +1,6 @@
 {
     "name": "promise-delegate",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Object-Oriented Promise Wrapper",
     "repository": {
         "type": "git",
