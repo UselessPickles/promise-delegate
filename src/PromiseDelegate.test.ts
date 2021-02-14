@@ -1,5 +1,9 @@
 import { PromiseDelegate } from "./PromiseDelegate";
 
+function noop(): void {
+    // do nothing
+}
+
 describe("resolve()", () => {
     test("resolves the underlying promise with a value", (done) => {
         const promiseDelegate = new PromiseDelegate<number>();
@@ -61,6 +65,9 @@ describe("resolve()", () => {
     test("throws if already resolved", () => {
         const promiseDelegate = new PromiseDelegate<number>();
 
+        // avoid NodeJS warnings about unhandled promise
+        promiseDelegate.promise.then(noop, noop);
+
         promiseDelegate.resolve(42);
 
         expect(() => {
@@ -70,6 +77,9 @@ describe("resolve()", () => {
 
     test("throws if already rejected", () => {
         const promiseDelegate = new PromiseDelegate<number>();
+
+        // avoid NodeJS warnings about unhandled promise
+        promiseDelegate.promise.then(noop, noop);
 
         promiseDelegate.reject(42);
 
@@ -130,6 +140,9 @@ describe("reject()", () => {
     test("throws if already resolved", () => {
         const promiseDelegate = new PromiseDelegate<number>();
 
+        // avoid NodeJS warnings about unhandled promise
+        promiseDelegate.promise.then(noop, noop);
+
         promiseDelegate.resolve(42);
 
         expect(() => {
@@ -139,6 +152,9 @@ describe("reject()", () => {
 
     test("throws if already rejected", () => {
         const promiseDelegate = new PromiseDelegate<number>();
+
+        // avoid NodeJS warnings about unhandled promise
+        promiseDelegate.promise.then(noop, noop);
 
         promiseDelegate.reject(42);
 
