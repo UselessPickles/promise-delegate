@@ -1,0 +1,88 @@
+{
+    "name": "promise-delegate",
+    "version": "1.0.0",
+    "description": "Object-Oriented Promise Wrapper",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/UselessPickles/promise-delegate.git"
+    },
+    "homepage": "https://github.com/UselessPickles/promise-delegate",
+    "bugs": {
+        "url": "https://github.com/UselessPickles/promise-delegate/issues"
+    },
+    "files": [
+        "dist",
+        "src"
+    ],
+    "main": "dist/cjs/PromiseDelegate.js",
+    "jsnext:main": "dist/es/PromiseDelegate.js",
+    "module": "dist/es/PromiseDelegate.js",
+    "types": "dist/types/PromiseDelegate.d.ts",
+    "scripts": {
+        "clean:dist": "rimraf dist",
+        "clean:coverage": "rimraf coverage",
+        "typecheck": "tsc --project tsconfig.typecheck.json --noEmit --pretty --noErrorTruncation",
+        "tsd": "tsd tsd_project",
+        "lint": "tslint --config tslint.json --project tsconfig.json",
+        "lint:fix": "npm run lint -- --fix",
+        "prettier:test": "prettier --ignore-unknown --list-different {*,**/*}",
+        "prettier:fix": "prettier --ignore-unknown --write {*,**/*}",
+        "build:types": "tsc --project tsconfig.build.json --pretty --noErrorTruncation --declaration true --emitDeclarationOnly true --declarationMap true --outDir dist/types",
+        "build:cjs": "tsc --project tsconfig.build.json --pretty --removeComments --noErrorTruncation --declaration false --outDir dist/cjs",
+        "build:es": "tsc --project tsconfig.build.json --pretty --removeComments --noErrorTruncation --declaration false -m es6 --outDir dist/es",
+        "build": "npm-run-all clean:dist --parallel build:*",
+        "jest": "jest",
+        "jest:coverage": "npm run clean:coverage && jest --coverage && opener coverage/lcov-report/index.html",
+        "test": "run-s typecheck tsd prettier:test lint jest",
+        "test:fix": "run-s typecheck tsd prettier:fix lint:fix jest",
+        "test:coverage": "run-s typecheck tsd prettier:test lint jest:coverage",
+        "build-travis": "run-p test:coverage build && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    },
+    "author": {
+        "name": "Jeff Lau",
+        "email": "jlau@uselesspickles.com",
+        "url": "http://www.uselesspickles.com"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "26.0.18",
+        "coveralls": "3.1.0",
+        "jest": "26.6.3",
+        "npm-run-all": "4.1.5",
+        "opener": "1.5.2",
+        "prettier": "2.2.1",
+        "rimraf": "3.0.2",
+        "ts-jest": "26.4.4",
+        "tsd": "0.14.0",
+        "tslint": "5.20.1",
+        "tslint-config-prettier": "1.18.0",
+        "typescript": "4.1.2"
+    },
+    "keywords": [
+        "typescript",
+        "promise",
+        "delegate",
+        "wrapper",
+        "object-oriented"
+    ],
+    "jest": {
+        "cacheDirectory": "./jest_cache",
+        "transform": {
+            "^.+\\.ts$": "ts-jest"
+        },
+        "collectCoverageFrom": [
+            "src/**/*.{js,ts}",
+            "!src/**/*.test-d.{js,ts}",
+            "!**/node_modules/**"
+        ],
+        "coverageReporters": [
+            "text",
+            "lcov"
+        ],
+        "testRegex": "((\\.|/)(test|spec))\\.(ts|js)$",
+        "moduleFileExtensions": [
+            "ts",
+            "js"
+        ]
+    }
+}

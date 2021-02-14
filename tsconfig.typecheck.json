@@ -1,0 +1,5 @@
+/* Compiler config for performing a typecheck on all source code (including tests, etc) */
+{
+    "extends": "./tsconfig.json",
+    "exclude": ["src/**/*.test-d.ts"]
+}

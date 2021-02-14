@@ -1,0 +1,11 @@
+/* Compiler config used for building the project distribution */
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        /* Basic Options */
+        "sourceMap": true,
+        "rootDir": "src",
+        "types": []
+    },
+    "exclude": ["src/**/*.test.ts", "src/**/*.test-d.ts"]
+}

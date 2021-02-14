@@ -1,0 +1,15 @@
+/* Default/base compiler config for IDE and other tools to discover by default */
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "lib": ["es6"],
+        "types": ["jest"],
+
+        "strict": true,
+        "alwaysStrict": true,
+
+        "moduleResolution": "node"
+    },
+    "include": ["src"]
+}
