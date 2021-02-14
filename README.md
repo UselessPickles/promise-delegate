@@ -1,6 +1,6 @@
 [![npm version](https://img.shields.io/npm/v/promise-delegate.svg)](https://www.npmjs.com/package/promise-delegate)
-[![Build Status](https://travis-ci.org/UselessPickles/promise-delegate.svg?branch=master)](https://travis-ci.org/UselessPickles/promise-delegate)
-[![Coverage Status](https://coveralls.io/repos/github/UselessPickles/promise-delegate/badge.svg?branch=master)](https://coveralls.io/github/UselessPickles/promise-delegate?branch=master)
+[![Build Status](https://travis-ci.org/UselessPickles/promise-delegate.svg?branch=main)](https://travis-ci.org/UselessPickles/promise-delegate)
+[![Coverage Status](https://coveralls.io/repos/github/UselessPickles/promise-delegate/badge.svg?branch=main)](https://coveralls.io/github/UselessPickles/promise-delegate?branch=main)
 
 # PromiseDelegate
 
