@@ -36,7 +36,7 @@
         "test": "run-s typecheck tsd prettier:test lint jest",
         "test:fix": "run-s typecheck tsd prettier:fix lint:fix jest",
         "test:coverage": "run-s typecheck tsd prettier:test lint jest:coverage",
-        "build-travis": "run-p test:coverage build && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+        "build-travis": "run-p test:coverage build && npm publish --dry-run && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
     },
     "author": {
         "name": "Jeff Lau",
