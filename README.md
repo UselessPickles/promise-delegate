@@ -14,19 +14,19 @@ definitions and source maps.
 
 <!-- TOC depthFrom:1 -->
 
-- [PromiseDelegate](#promisedelegate)
-- [Contents](#contents)
-- [Why? (example)](#why-example)
-- [Installation](#installation)
-- [Usage](#usage)
-    - [Import](#import)
-    - [Instantiate](#instantiate)
-    - [Properties](#properties)
-        - [promise](#promise)
-        - [settled](#settled)
-    - [Methods](#methods)
-        - [resolve](#resolve)
-        - [reject](#reject)
+-   [PromiseDelegate](#promisedelegate)
+-   [Contents](#contents)
+-   [Why? (example)](#why-example)
+-   [Installation](#installation)
+-   [Usage](#usage)
+    -   [Import](#import)
+    -   [Instantiate](#instantiate)
+    -   [Properties](#properties)
+        -   [promise](#promise)
+        -   [settled](#settled)
+    -   [Methods](#methods)
+        -   [resolve](#resolve)
+        -   [reject](#reject)
 
 <!-- /TOC -->
 
@@ -110,6 +110,7 @@ const PromiseDelegate = require("promise-delegate").PromiseDelegate;
 ```
 
 ## Instantiate
+
 ```ts
 constructor<ValueType = void>(ignoreMultipleSettles: boolean = false)
 ```
@@ -148,6 +149,7 @@ const promiseDelegate = new PromiseDelegate();
 ## Properties
 
 ### promise
+
 ```ts
 promise: Promise<ValueType>
 ```
@@ -156,8 +158,9 @@ A reference to the underlying `Promise` that can be settled (resolved/rejected)
 by the `PromiseDelegate`.
 
 ### settled
+
 ```ts
-settled: boolean
+settled: boolean;
 ```
 
 True if this `PromiseDelegate` has been settled (resolved/rejected).
@@ -165,6 +168,7 @@ True if this `PromiseDelegate` has been settled (resolved/rejected).
 ## Methods
 
 ### resolve
+
 ```ts
 resolve(value: ValueType | PromiseLike<ValueType>): void
 ```
@@ -173,12 +177,13 @@ Resolves the underlying `Promise` with the specified `value` and
 marks this `PromiseDelegate` as `settled`.
 
 Throws an error if this `PromiseDelegate` was already previously settled, and it
- was not [instantiated](#instantiate) with `allowMultipleSettles = true`.
+was not [instantiated](#instantiate) with `allowMultipleSettles = true`.
 
 NOTE: If `ValueType` is `void`, then the `value` parameter may be omitted
 completely, or must be exactly `undefined` if specified.
 
 ### reject
+
 ```ts
 reject(reason?: any): void
 ```
@@ -187,4 +192,4 @@ Rejects the underlying `Promise` with the specified `reason` and
 marks this `PromiseDelegate` as `settled`.
 
 Throws an error if this `PromiseDelegate` was already previously settled, and it
- was not [instantiated](#instantiate) with `allowMultipleSettles = true`.
+was not [instantiated](#instantiate) with `allowMultipleSettles = true`.
