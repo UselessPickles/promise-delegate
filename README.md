@@ -1,4 +1,5 @@
 [![npm version](https://img.shields.io/npm/v/promise-delegate.svg)](https://www.npmjs.com/package/promise-delegate)
+[![Join the chat at https://gitter.im/promise-delegate/Lobby](https://badges.gitter.im/UselessPickles/ts-event-publisher//Lobby.svg)](https://gitter.im/UselessPickles/promise-delegate)
 [![Build Status](https://travis-ci.org/UselessPickles/promise-delegate.svg?branch=main)](https://travis-ci.org/UselessPickles/promise-delegate)
 [![Coverage Status](https://coveralls.io/repos/github/UselessPickles/promise-delegate/badge.svg?branch=main)](https://coveralls.io/github/UselessPickles/promise-delegate?branch=main)
 
