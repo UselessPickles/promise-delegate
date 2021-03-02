@@ -25,4 +25,4 @@ Initial release
 
 [unreleased]: https://github.com/UselessPickles/promise-delegate/compare/v1.0.1...HEAD
 [1.0.1]: https://github.com/UselessPickles/promise-delegate/compare/v1.0.0...v1.0.1
-[1.0.0]: https://github.com/UselessPickles/promise-delegate/releases/tag/v1.0.0
+[1.0.0]: https://github.com/UselessPickles/promise-delegate/tree/v1.0.0
